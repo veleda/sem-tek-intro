@@ -1,0 +1,13 @@
+@prefix :      <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+:worksAt
+        rdfs:label "Sier noe om hvor en person jobber." ;
+        rdfs:domain foaf:Person ; # alle som jobber et sted skal være en person
+        rdfs:range :Company . # alle disse stedene skal være av typen Company
+
+:Employee
+        rdfs:subClassOf foaf:Person ;
+        rdfs:label "En person som jobber et sted." .
